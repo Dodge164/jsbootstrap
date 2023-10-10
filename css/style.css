@@ -1,0 +1,33 @@
+/* Ваши стили */
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  height: auto !important
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+}
+  
+footer {
+  text-align: center;
+}
+
+.footer-text {
+  padding: 12px 0 0 0;
+}
+
+ul {
+  padding: 12px 0 0 0;
+  list-style-type: none;
+}

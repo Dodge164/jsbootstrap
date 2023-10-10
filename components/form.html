@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <main class="container mt-5">
+      <h2>Отчетный лист (восполнение водных промысловых ресурсов)</h2>
+      <form>
+        <div class="form-group">
+          <label for="item">Наименование ресурса *</label>
+          <input required type="text" class="form-control" id="item" />
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Количество *</label>
+          <input required type="number" class="form-control" id="amount" />
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            id="kg"
+            checked
+            value="kg"
+            type="radio"
+            name="measureOptions"
+            class="form-check-input"
+          />
+          <label class="form-check-label" for="kg">килограмм</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            id="individuals"
+            value="individuals"
+            name="measureOptions"
+            class="form-check-input"
+          />
+          <label class="form-check-label" for="individuals">штук</label>
+        </div>
+        <div class="form-group">
+          <label for="textarea">Особые отметки</label>
+          <textarea class="form-control" id="textarea" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location">Местоположение</label>
+          <select class="form-control" id="location">
+            <option>Северный залив</option>
+            <option>Южный залив</option>
+            <option>Западный залив</option>
+            <option>Восточный залив</option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="vaccinations"
+            value="vaccinations"
+          />
+          <label class="form-check-label" for="vaccinations">антибиотик</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="feed"
+            value="feed"
+          />
+          <label class="form-check-label" for="feed"
+            >стартовая кормовая культура</label
+          >
+        </div>
+      
+        <div class="form-group pt-2">
+          <label for="email">Электронная почта отделения</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!-- Модальное окно -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Результат отправки
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="modalText"></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

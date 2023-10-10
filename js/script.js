@@ -1,18 +1,16 @@
-// init Isotope
-var $grid = $('.collection-list').isotope({
-  // options
-});
-// filter items on button click
-$('.filter-button-group').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  resetFilterBtns();
-  $(this).addClass('active-filter-btn');
-  $grid.isotope({ filter: filterValue });
+const showListButton = document.getElementById('showList');
+const showFormButton = document.getElementById('showForm');
+const showHomeButton = document.getElementById('showHome');
+const contentFrame = document.getElementById('contentFrame');
+
+showListButton.addEventListener('click', () => {
+  contentFrame.src = 'components/list.html';
 });
 
-var filterBtns = $('.filter-button-group').find('button');
-function resetFilterBtns(){
-  filterBtns.each(function(){
-    $(this).removeClass('active-filter-btn');
-  });
-}
+showFormButton.addEventListener('click', () => {
+  contentFrame.src = 'components/form.html';
+});
+
+showHomeButton.addEventListener('click', () => {
+  contentFrame.src = 'components/home.html';
+});
